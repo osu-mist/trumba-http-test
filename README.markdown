@@ -7,7 +7,7 @@ Shell commands to download and [upload](http://www.trumba.com/help/api/icsimport
 
 ### Download Sample iCalendar File
 
-    $ curl http://calendar.oregonstate.edu/osu.ics
+    $ curl --remote-name http://calendar.oregonstate.edu/osu.ics
 
 ### Define Credentials
 
