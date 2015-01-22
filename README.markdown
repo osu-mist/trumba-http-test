@@ -3,11 +3,13 @@
 Shell commands to download and [upload](http://www.trumba.com/help/api/icsimport.aspx) iCalendar files from [Trumba](http://www.trumba.com).
 
 
+
 ## Configure Environment
 
 ### Download Sample iCalendar File
 
     $ curl --remote-name http://calendar.oregonstate.edu/osu.ics
+
 
 ### Define Credentials
 
@@ -16,14 +18,25 @@ Shell commands to download and [upload](http://www.trumba.com/help/api/icsimport
     $ WEBNAME="TrumbaWebName"
 
 
+
 ## Test Trumba
 
-### GET without authentication
+### Without Authentication
+
+#### GET
 
     $ curl https://www.trumba.com/service/$WEBNAME.ics
     You do not have permission to view this directory or page.
 
-### GET with authentication
+#### PUT
+
+    $ curl --upload-file osu.ics https://www.trumba.com/service/$WEBNAME.ics
+    You do not have permission to view this directory or page.
+
+
+### With Authentication
+
+#### GET
 
     $ curl --user $USERNAME:$PASSWORD https://www.trumba.com/service/$WEBNAME.ics
     BEGIN:VCALENDAR
@@ -35,12 +48,9 @@ Shell commands to download and [upload](http://www.trumba.com/help/api/icsimport
     X-WR-TIMEZONE:America/Los_Angeles
     END:VCALENDAR
 
-### PUT without authentication
+#### PUT
 
-    $ curl --upload-file osu.ics https://www.trumba.com/service/$WEBNAME.ics
-    You do not have permission to view this directory or page.
-
-### PUT with authentication
+The following command overwrites the remote calendar with the contents of the local calendar. See the description of the `delta` parameter below.
 
     $ curl --upload-file osu.ics --user $USERNAME:$PASSWORD https://www.trumba.com/service/$WEBNAME.ics
     <?xml version="1.0"?>
@@ -98,7 +108,9 @@ Shell commands to download and [upload](http://www.trumba.com/help/api/icsimport
       <ResponseMessage Code="1101" Description="Event added" Level="Information" UID="20140709T000000Z-95837@calendar.oregonstate.edu" />
     </Response>
 
-### PUT Event with Same UID
+#### PUT Event with Same UID
+
+This command includes the URL [parameter](http://www.trumba.com/help/api/icsimport.aspx#url_format) `?delta=true` which only modifies events present in both the local and remote calendar. The default value of this parameter is `false`. 
 
     $ curl --upload-file event-with-same-uid.ics --user $USERNAME:$PASSWORD "https://www.trumba.com/service/$WEBNAME.ics?delta=true"
     <?xml version="1.0"?>
@@ -106,9 +118,7 @@ Shell commands to download and [upload](http://www.trumba.com/help/api/icsimport
       <ResponseMessage Code="1102" Description="Event modified" Level="Information" UID="20150120T080000Z-94799@calendar.oregonstate.edu" />
     </Response>
 
-According to the [documentation](http://www.trumba.com/help/api/icsimport.aspx#url_format), the `delta` parameter "controls whether the incoming feed is considered to be a full feed of data or only changes".
-
-### PUT Event with Unique UID
+#### PUT Event with Unique UID
 
     $ curl --upload-file event-with-unique-uid.ics --user $USERNAME:$PASSWORD "https://www.trumba.com/service/$WEBNAME.ics?delta=true"
     <?xml version="1.0"?>
@@ -116,7 +126,7 @@ According to the [documentation](http://www.trumba.com/help/api/icsimport.aspx#u
       <ResponseMessage Code="1101" Description="Event added" Level="Information" UID="123456789@calendar.oregonstate.edu" />
     </Response>
 
-### PUT Event with Same UID and Cancel Method
+#### PUT Event with Same UID and Cancel Method
 
     $ cat event-with-cancel-method.ics
     BEGIN:VCALENDAR
