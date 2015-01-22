@@ -1,0 +1,219 @@
+BEGIN:VCALENDAR
+PRODID:-//Oregon State University//NONSGML Web Calendar//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:US/Pacific
+BEGIN:STANDARD
+DTSTART:19671029T020000
+TZOFFSETTO:-0800
+TZOFFSETFROM:-0700
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10;UNTIL=20061029
+TZNAME:PST
+END:STANDARD
+BEGIN:STANDARD
+DTSTART:20071104T020000
+TZOFFSETTO:-0800
+TZOFFSETFROM:-0700
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=11
+TZNAME:PST
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19870405T020000
+TZOFFSETTO:-0700
+TZOFFSETFROM:-0800
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=4;UNTIL=20060402
+TZNAME:PDT
+END:DAYLIGHT
+BEGIN:DAYLIGHT
+DTSTART:20070311T020000
+TZOFFSETTO:-0700
+TZOFFSETFROM:-0800
+RRULE:FREQ=YEARLY;BYDAY=2SU;BYMONTH=3
+TZNAME:PDT
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:20150122T180000Z-101350@calendar.oregonstate.edu
+CLASS:PUBLIC
+SUMMARY:TAC Webinar - Get to Know Canvas
+DESCRIPTION:<p>\n  <strong>TAC Webinar: Get to know Canvas</strong>. Learn 
+ about course layout and tools in Canvas and how to add documents\, links an
+ d media. We will also have an overview of\n  assignments\, quizzes and the 
+ grade book. Thurs. Jan. 22\, 10-10:50 am. Register here: <a href="http://bi
+ t.ly/1IsCDTa">http://bit.ly/1IsCDTa</a> Questions?\n  Contact <a href="mail
+ to:Lynn.Greenough@oregonstate.edu">Lynn Greenough</a>.\n</p>\n
+DTSTART:20150122T180000Z
+DTEND:20150122T185000Z
+LOCATION:Webinar
+X-OSU-CONTACT-DEPT:Academic Technologies
+X-OSU-CONTACT-EMAIL:lynn.greenough@oregonstate.edu
+X-OSU-CONTACT-PHONE:1 541 737 1035
+X-OSU-COST:Free
+LAST-MODIFIED:20150108T191800Z
+CREATED:20150108T191800Z
+DTSTAMP:20150108T191800Z
+CONTACT:Lynn Greenough
+END:VEVENT
+BEGIN:VEVENT
+UID:20150122T193000Z-101188@calendar.oregonstate.edu
+CLASS:PUBLIC
+SUMMARY:Corvallis OSU Business Roundtable
+DESCRIPTION:The popular OSU Business Roundtable series is coming to Corvall
+ is. The OSU Business Roundtable provides alumni with a meaningful way to\ni
+ nteract with the university\, local businesses and each other and is brough
+ t to you in collaboration with the <a href="http://www.osualum.com/admin/ww
+ w.corvallisoregon.gov/">City of\nCorvallis</a>.<br />\n<br />\nDon't miss t
+ he inaugural meeting of the Corvallis BRT featuring <a href="http://oregons
+ tate.edu/leadership/business/">Ilene Kleinsorge</a>\, Dean of the OSU Colle
+ ge of Business. Ilene will talk about\nher path to success and how her jour
+ ney shaped her leadership philosophy.<br />\n<br />\nVisit http://www.osual
+ um.com/corvallisBRT to register.<br />
+DTSTART:20150122T193000Z
+DTEND:20150122T213000Z
+X-OSU-CONTACT-DEPT:Alumni Relations
+X-OSU-CONTACT-EMAIL:angela.mcbride@oregonstate.edu
+X-OSU-COST:$20 OSUAA members | $25 non-members
+X-OSU-LOCATION:Austin Hall
+LAST-MODIFIED:20150105T235721Z
+CREATED:20150105T235721Z
+DTSTAMP:20150105T235721Z
+CONTACT:Angela McBride
+END:VEVENT
+BEGIN:VEVENT
+UID:20150122T233000Z-101427@calendar.oregonstate.edu
+CLASS:PUBLIC
+SUMMARY:Professor Kyril Solntsev Physical Seminar
+DESCRIPTION:&nbsp\;Photoinduced processes in Flourescent Proteins. From ult
+ rafast to ultraslow.
+DTSTART:20150122T233000Z
+DTEND:20150123T003000Z
+X-OSU-CONTACT-DEPT:Chemistry
+X-OSU-CONTACT-EMAIL:luanne.johnson@oregonstate.edu
+X-OSU-CONTACT-PHONE:1 541 737 6706
+X-OSU-COST:Free
+X-OSU-LOCATION:Linus Pauling Science Center
+X-OSU-ROOM:402
+LAST-MODIFIED:20150109T234631Z
+CREATED:20150109T234631Z
+DTSTAMP:20150109T234631Z
+CONTACT:Luanne Johnson
+END:VEVENT
+BEGIN:VEVENT
+UID:20150123T010000Z-100758@calendar.oregonstate.edu
+CLASS:PUBLIC
+SUMMARY:Patrick S. Lee\, PhD Organic Seminar
+DESCRIPTION:&nbsp\;Vignettes of drug discovery programs at Novartis
+DTSTART:20150123T010000Z
+DTEND:20150123T020000Z
+X-OSU-CONTACT-DEPT:Chemistry
+X-OSU-CONTACT-EMAIL:luanne.johnson@oregonstate.edu
+X-OSU-CONTACT-PHONE:1 541 737 6706
+X-OSU-COST:Free
+X-OSU-LOCATION:Linus Pauling Science Center
+X-OSU-ROOM:402
+LAST-MODIFIED:20141217T175036Z
+CREATED:20141217T175036Z
+DTSTAMP:20141217T175036Z
+CONTACT:Luanne Johnson
+END:VEVENT
+BEGIN:VEVENT
+UID:20150123T013000Z-101368@calendar.oregonstate.edu
+CLASS:PUBLIC
+SUMMARY:January Repair Fair
+DESCRIPTION:<p>\n  Bring your broken items and volunteers will help you lea
+ rn how to repair your belongings\; attend demos to learn more skills! See l
+ ist below for what's on offer this month. Save money\, save natural\n  reso
+ urces.\n</p>\n<h3>\n  Repair skills offered:\n</h3>\n<ul>\n  <li>\n    <str
+ ong>Appliances</strong> (small items only\, please)\n  </li>\n  <li>\n    <
+ strong>Clothing</strong>\n  </li>\n  <li>\n    <strong>Computer diagnostics
+ </strong>\n  </li>\n  <li>\n    <strong>Electronics</strong> (small items o
+ nly\, please)\n  </li>\n  <li>\n    <strong>Housewares</strong> (furniture\
+ , ceramics\, lamps\, etc.)\n  </li>\n  <li>\n    <strong>Jewelry</strong>\n
+   </li>\n  <li>And <strong>more</strong>!\n  </li>\n</ul>\n<h3>\n  D.I.Y. D
+ emonstrations:\n</h3>\n<ul>\n  <li>\n    <strong>5:45-6:30 pm: Low Car Diet
+ : Cheap &amp\; Easy Ways to Go Car-Lite</strong> - Mystified by Corvallis t
+ ravel options? Discover how you can simplify carpooling with a hands-on dem
+ o of the\n    free “Drive Less. Connect” website. Learn the ropes for l
+ oading a bike onto a bus bike rack and practice right on-site. Stop by to l
+ earn these easy tricks and more about alternative\n    transportation. (Lea
+ der: Alaina Hawley\, Alternative Transportation Student Worker for the <a h
+ ref="http://fa.oregonstate.edu/sustainability/" target="_blank" title=\n   
+  "OSU Sustainability Office website">OSU Sustainability Office</a>)\n  </li
+ >\n  <li>\n    <strong>6:30 to 7:00 pm: Here’s the Drill: Building a D.I.
+ Y. Toolkit</strong> - Have you ever thought about making your own toolkit\,
+  but wasn’t sure what to fill it with? Stop on by to learn\n    about the
+  essential tools that can get almost any job done. (Leader: Chris Moser\, <
+ a href="http://recycle.oregonstate.edu/opportunities/masterrecycler" title=
+ "Master Recycler webpage">Master\n    Recycler</a>)\n  </li>\n  <li>\n    <
+ strong>7:00-7:20 pm: Wormshop: Composting with a Worm Bin</strong> - Worm b
+ ins are a method of composting using red wrigglers to break down food waste
+ . Attend this 20-minute presentation to\n    learn how to construct and mai
+ ntain a worm bin for your household. (Leader: Kyle Reed\, Student Outreach 
+ Assistant for <a href="http://fa.oregonstate.edu/recycling" title=\n    "Ca
+ mpus Recycling homepage">Campus Recycling</a>)\n  </li>\n</ul>\n<h3>\n  Add
+ itional Details:\n</h3>\n<p>\n  We don’t have spare parts\, but will do o
+ ur best to repair what we can and/or refer you to where you could find the 
+ parts you need. If you have parts already\, we may be able to help you inst
+ all\n  them.\n</p>\n<p>\n  <strong>Directions</strong>: We are located at 6
+ 44 SW 13th St. in Corvallis\; see a <a href="http://fa.oregonstate.edu/site
+ s/fa.oregonstate.edu/files/recycling/repair-fair-map.jpg" target="_blank"\n
+   title="See a map of the entrance and parking">map of the entrance and par
+ king here</a>\; view our building on <a href="http://goo.gl/maps/pzDqB" tar
+ get="_blank" title=\n  "View location on Google Maps">Google Maps here</a>.
+  Please enter through the warehouse gate on 13th Street\, between A Ave. an
+ d the railroad tracks. City buses <a href=\n  "http://www.corvallisoregon.g
+ ov/index.aspx?page=824" target="_blank" title="Bus route 3">3</a>\, <a href
+ ="http://www.corvallisoregon.gov/index.aspx?page=827" target="_blank" title
+ =\n  "Bus route 6">6</a> and <a href="http://www.corvallisoregon.gov/index.
+ aspx?page=829" target="_blank" title="Bus route 8">8</a> stop within 2-4 bl
+ ocks of our building while routes <a href=\n  "http://www.corvallisoregon.g
+ ov/index.aspx?page=822" target="_blank" title="Bus route 1">1</a>\, <a href
+ ="http://www.corvallisoregon.gov/index.aspx?page=826" target="_blank" title
+ =\n  "Bus route 5">5</a> and <a href="http://www.corvallisoregon.gov/index.
+ aspx?page=828" target="_blank" title="Bus route 7">7</a> stop 6 blocks away
+  at 11th &amp\; Monroe (view full details on the\n  <a href="http://www.cor
+ vallisoregon.gov/index.aspx?page=167" target="_blank" title="Corvallis Tran
+ sit System website">Corvallis Transit System website</a> or use <a href=\n 
+  "http://maps.google.com/intl/en/landing/transit/#mdy" target="_blank" titl
+ e="Google Transit website">Google Transit</a> to find the best option for y
+ ou).\n</p>\n<p>\n  Join this event <a href="https://www.facebook.com/events
+ /422377587910849">on Facebook</a>.\n</p>\n<p>\n  Repair Fairs are twice-per
+ -term events sponsored by the student group Waste Watchers\, a joint group 
+ of Campus Recycling and the Student Sustainability Initiative. In the 2014-
+ 15 academic year we\n  will host them in the months of October\, November\,
+  January\, February\, April and May. Repair Fairs are free and open to the 
+ public.&nbsp\;\n</p>
+DTSTART:20150123T013000Z
+DTEND:20150123T033000Z
+X-OSU-SUBTITLE:Free repairs & demos
+LAST-MODIFIED:20150115T190611Z
+CREATED:20150108T201230Z
+DTSTAMP:20150108T201230Z
+CONTACT:Andrea Norris
+END:VEVENT
+BEGIN:VEVENT
+UID:20140709T000000Z-95837@calendar.oregonstate.edu
+CLASS:PUBLIC
+SUMMARY:Lead Climbing in the Gym
+DESCRIPTION:<p>\n  This course serves as an introduction to the systems and
+  techniques used for lead climbing in the climbing gym setting. Classes are
+  Mondays and Wednesdays. Last day of class will be Thursday Jan\n  29\, 201
+ 5.\n</p>\n<p>\n  Prerequisites: Ability to comfortably climb 5.8 on top rop
+ e.\n</p>
+DTSTART:20150121T030000Z
+DTEND:20150121T060000Z
+RRULE:FREQ=WEEKLY;UNTIL=20150129;INTERVAL=1;BYDAY=TU,TH;WKST=MO
+X-OSU-CITY:Corvallis
+X-OSU-CONTACT-DEPT:Recreational Sports
+X-OSU-CONTACT-EMAIL:ALIdesk@oregonstate.edu
+X-OSU-CONTACT-PHONE:541-737-4254
+X-OSU-COST:$45.00 Students and RecSports Members/ $50.00 OSU Community/ $55
+ .00 General Public
+X-OSU-LOCATION:Dixon Recreation Center
+X-OSU-ROOM:Dixon Climbing Center
+LAST-MODIFIED:20141125T004826Z
+CREATED:20140606T214853Z
+DTSTAMP:20140606T214853Z
+CONTACT:ALI Service Desk
+END:VEVENT
+END:VCALENDAR
