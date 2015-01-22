@@ -100,61 +100,32 @@ Shell commands to download and [upload](http://www.trumba.com/help/api/icsimport
 
 ### PUT Event with Same UID
 
-    $ curl --remote-name --user $USERNAME:$PASSWORD https://www.trumba.com/service/$WEBNAME.ics
-    $ cp $WEBNAME.ics temp.ics
-    $ emacs temp.ics
-    $ curl --upload-file temp.ics --user $USERNAME:$PASSWORD https://www.trumba.com/service/$WEBNAME.ics
+    $ curl --upload-file event-with-same-uid.ics --user $USERNAME:$PASSWORD "https://www.trumba.com/service/$WEBNAME.ics?delta=true"
     <?xml version="1.0"?>
     <Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <ResponseMessage Code="1102" Description="Event modified" Level="Information" UID="20150120T080000Z-94799@calendar.oregonstate.edu" />
     </Response>
 
-Uploading a modified event overwrites the entire calendar!
+According to the [documentation](http://www.trumba.com/help/api/icsimport.aspx#url_format), the `delta` parameter "controls whether the incoming feed is considered to be a full feed of data or only changes".
 
-    $ curl --output modified-$WEBNAME.ics --user $USERNAME:$PASSWORD https://www.trumba.com/service/$WEBNAME.ics
-    $ diff $WEBNAME.ics modified-$WEBNAME.ics | grep "^<" | wc -l
-    88
-    $ diff $WEBNAME.ics modified-$WEBNAME.ics | grep "^>" | wc -l
-    10
+### PUT Event with Unique UID
 
-Downloading the calendar, modifying a single event, and uploading the calendar modifies all the events!
+    $ curl --upload-file event-with-unique-uid.ics --user $USERNAME:$PASSWORD "https://www.trumba.com/service/$WEBNAME.ics?delta=true"
+    <?xml version="1.0"?>
+    <Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ResponseMessage Code="1101" Description="Event added" Level="Information" UID="123456789@calendar.oregonstate.edu" />
+    </Response>
 
-    $ diff $WEBNAME.ics modified-$WEBNAME.ics
-    26c26
-    < SUMMARY:WRGP Winter Seminar: Dr. Kim Anderson
-    ---
-    > SUMMARY:WRGP Winter Seminar: Doctor Kim Anderson
-    32c32
-    < DTSTAMP:20150121T222513Z
-    ---
-    > DTSTAMP:20150121T223005Z
-    41c41
-    < LAST-MODIFIED:20150121T222513Z
-    ---
-    > LAST-MODIFIED:20150121T223005Z
-    54c54
-    < DTSTAMP:20150121T222834Z
-    ---
-    > DTSTAMP:20150121T223006Z
-    79c79
-    < LAST-MODIFIED:20150121T222834Z
-    ---
-    > LAST-MODIFIED:20150121T223006Z
-    91c91
-    < DTSTAMP:20150121T222834Z
-    ---
-    > DTSTAMP:20150121T223006Z
-    99c99
-    < LAST-MODIFIED:20150121T222834Z
-    ---
-    > LAST-MODIFIED:20150121T223006Z
-    108,109c108,109
-    < RRULE:FREQ=WEEKLY;UNTIL=20150129T000000Z;INTERVAL=1;BYDAY=WE
-    < LAST-MODIFIED:20150121T222834Z
-    ---
-    > RRULE:FREQ=WEEKLY;UNTIL=20150130T000000Z;INTERVAL=1;BYDAY=WE
-    > LAST-MODIFIED:20150121T223006Z
-    111c111
-    < DTSTAMP:20150121T222834Z
-    ---
-    > DTSTAMP:20150121T223006Z
+### PUT Event with Same UID and Cancel Method
+
+    $ cat event-with-cancel-method.ics
+    BEGIN:VCALENDAR
+    BEGIN:VEVENT
+    UID:123456789@calendar.oregonstate.edu
+    METHOD:CANCEL
+    STATUS:CANCELLED
+    END:VEVENT
+    END:VCALENDAR
+    $ curl --upload-file event-with-cancel-method.ics --user $USERNAME:$PASSWORD "https://www.trumba.com/service/$WEBNAME.ics?delta=true"
+
+This command produces no output and does not change the calendar.
