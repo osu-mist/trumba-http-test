@@ -57,7 +57,7 @@ The following command overwrites the remote calendar with the contents of the lo
 
     $ curl --upload-file osu.ics \
            --user $USERNAME:$PASSWORD \
-	   https://www.trumba.com/service/$WEBNAME.ics
+           https://www.trumba.com/service/$WEBNAME.ics
     <?xml version="1.0"?>
     <Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <ResponseMessage Code="2101" Description="Property not recognized" Level="Warning" LineNumber="41" PropertyName="X-OSU-CONTACT-DEPT" />
@@ -119,7 +119,7 @@ This command includes the URL [parameter](http://www.trumba.com/help/api/icsimpo
 
     $ curl --upload-file event-with-same-uid.ics \
            --user $USERNAME:$PASSWORD \
-	   "https://www.trumba.com/service/$WEBNAME.ics?delta=true"
+           "https://www.trumba.com/service/$WEBNAME.ics?delta=true"
     <?xml version="1.0"?>
     <Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <ResponseMessage Code="1102" Description="Event modified" Level="Information" UID="20150120T080000Z-94799@calendar.oregonstate.edu" />
@@ -129,7 +129,7 @@ This command includes the URL [parameter](http://www.trumba.com/help/api/icsimpo
 
     $ curl --upload-file event-with-unique-uid.ics \
            --user $USERNAME:$PASSWORD \
-	   "https://www.trumba.com/service/$WEBNAME.ics?delta=true"
+           "https://www.trumba.com/service/$WEBNAME.ics?delta=true"
     <?xml version="1.0"?>
     <Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <ResponseMessage Code="1101" Description="Event added" Level="Information" UID="123456789@calendar.oregonstate.edu" />
@@ -147,6 +147,6 @@ This command includes the URL [parameter](http://www.trumba.com/help/api/icsimpo
     END:VCALENDAR
     $ curl --upload-file event-with-cancel-method.ics \
            --user $USERNAME:$PASSWORD \
-	   "https://www.trumba.com/service/$WEBNAME.ics?delta=true"
+           "https://www.trumba.com/service/$WEBNAME.ics?delta=true"
 
 This command produces no output and does not change the calendar.
