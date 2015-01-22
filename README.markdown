@@ -1,6 +1,6 @@
 # Test Trumba iCalendar HTTP Requests
 
-To test Trumba, set `USERNAME`, `PASSWORD`, and `WEBNAME` in `config.bash` and execute the following shell scripts.
+To test [Trumba](http://www.trumba.com), set `USERNAME`, `PASSWORD`, and `WEBNAME` in `config.bash` and execute the following shell scripts. Refer to the [documentation](http://www.trumba.com/help/api/icsimport.aspx) for details.
 
 
 
