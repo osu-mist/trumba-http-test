@@ -46,7 +46,7 @@ To test [Trumba](http://www.trumba.com), set `USERNAME`, `PASSWORD`, and `WEBNAM
 
 ## PUT with authentication and delta=false
 
-With the URL parameter `?delta=false`, the local calendar overwrites the remote calendar.
+With the URL parameter `?delta=false`, the local calendar overwrites the remote calendar. This is the default behavior.
 
     $ ./PUT-auth-nodelta.bash empty.ical 
     HTTP/1.1 100 Continue
