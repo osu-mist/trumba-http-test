@@ -115,21 +115,26 @@ Update an existing event by uploading an iCalendar file containing an event with
 
 Delete an existing event by uploading an iCalendar file containing an event with METHOD:CANCEL.
 
-    $ ./PUT-auth-delta.bash delete.ical 
+    $ ./PUT-auth-delta.bash delete.ical
     HTTP/1.1 100 Continue
-        
+    
     HTTP/1.1 200 OK
     Cache-Control: private
-    Content-Length: 0
+    Content-Length: 244
+    Content-Type: text/html
     Server: Microsoft-IIS/7.0
     X-AspNet-Version: 4.0.30319
     X-Powered-By: ASP.NET
     P3P: CP='ALL DSP COR CUR ADMa DEVa CONi OUR PUBi IND ONL FIN INT DEM CNT LOC'
-    Date: Thu, 22 Jan 2015 21:47:38 GMT
+    Date: Wed, 28 Jan 2015 23:26:36 GMT
     Accept-Ranges: none
-
-(This does not appear to work.)
-
+    
+    <?xml version="1.0"?>
+    <Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3
+    .org/2001/XMLSchema">                                                                  
+      <ResponseMessage Code="1103" Description="Event deleted" Level="Information" UID="1234
+    56789" />                                                                              
+    </Response>
 
 
 ## GET with authentication
